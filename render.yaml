@@ -4,8 +4,10 @@ services:
     runtime: static
     buildCommand: bun install; bunx --bun vite build
     staticPublishPath: dist
+    rootDir: bun-react-vite
   - name: bun-express
     type: web
     runtime: node
     buildCommand: bun install
     startCommand: bun server.js
+    rootDir: bun-express
