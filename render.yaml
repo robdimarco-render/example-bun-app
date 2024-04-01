@@ -1,0 +1,10 @@
+services:
+  - name: bun-react-vite
+    type: web
+    runtime: static
+    buildCommand: bun install
+  - name: bun-express
+    type: web
+    runtime: node
+    buildCommand: bun install
+    startCommand: bun server.js
