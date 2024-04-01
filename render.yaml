@@ -9,5 +9,5 @@ services:
     type: web
     runtime: node
     buildCommand: bun install
-    startCommand: bun server.js
+    startCommand: bun server.ts
     rootDir: bun-express
