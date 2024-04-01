@@ -2,7 +2,8 @@ services:
   - name: bun-react-vite
     type: web
     runtime: static
-    buildCommand: bun install
+    buildCommand: bun install; bunx --bun vite build
+    staticPublishPath: dist
   - name: bun-express
     type: web
     runtime: node
