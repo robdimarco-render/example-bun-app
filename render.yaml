@@ -7,11 +7,11 @@ services:
   branch: main
   envVars:
   - key: SKIP_NODE_INSTALL
-    sync: false
+    value: true
   - key: SKIP_RUBY_INSTALL
-    sync: false
+    value: true
   - key: SKIP_PYTHON_INSTALL
-    sync: false
+    value: true
   buildCommand: bun install; bun --bun vite build
   staticPublishPath: dist
   rootDir: bun-react-vite
