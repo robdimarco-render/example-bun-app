@@ -1,13 +1,27 @@
+version: "1"
 services:
-  - name: bun-react-vite
-    type: web
-    runtime: static
-    buildCommand: bun install; bun --bun vite build
-    staticPublishPath: dist
-    rootDir: bun-react-vite
-  - name: bun-express
-    type: web
-    runtime: node
-    buildCommand: bun install
-    startCommand: bun server.ts
-    rootDir: bun-express
+- type: web
+  name: bun-react-vite
+  runtime: static
+  repo: https://github.com/robdimarco-render/example-bun-app
+  branch: main
+  envVars:
+  - key: SKIP_NODE_INSTALL
+    sync: false
+  - key: SKIP_RUBY_INSTALL
+    sync: false
+  - key: SKIP_PYTHON_INSTALL
+    sync: false
+  buildCommand: bun install; bun --bun vite build
+  staticPublishPath: dist
+  rootDir: bun-react-vite
+- type: web
+  name: bun-express
+  runtime: node
+  repo: https://github.com/robdimarco-render/example-bun-app
+  branch: main
+  plan: starter
+  region: oregon
+  buildCommand: bun install
+  startCommand: bun server.ts
+  rootDir: bun-express
