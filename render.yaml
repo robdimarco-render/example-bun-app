@@ -25,3 +25,6 @@ services:
   buildCommand: bun install
   startCommand: bun server.ts
   rootDir: bun-express
+- type: web
+  name: bun-express
+  runtime: bogus
