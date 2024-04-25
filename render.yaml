@@ -6,11 +6,9 @@ services:
   repo: https://github.com/robdimarco-render/example-bun-app
   branch: main
   envVars:
-  - key: SKIP_NODE_INSTALL
-    value: true
-  - key: SKIP_RUBY_INSTALL
-    value: true
-  - key: SKIP_PYTHON_INSTALL
+  - key: BUN_VERSION
+    value: 1.1.4 
+  - key: RENDER_USE_DYNAMIC_LANGUAGE_LOADING
     value: true
   buildCommand: bun install; bun --bun vite build
   staticPublishPath: dist
@@ -18,6 +16,9 @@ services:
 - type: web
   name: bun-express
   runtime: node
+  envVars:
+  - key: BUN_VERSION
+    value: 1.1.4 
   repo: https://github.com/robdimarco-render/example-bun-app
   branch: main
   plan: starter
