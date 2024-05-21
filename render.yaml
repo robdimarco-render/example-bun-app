@@ -7,9 +7,7 @@ services:
   branch: main
   envVars:
   - key: BUN_VERSION
-    value: 1.1.4 
-  - key: RENDER_USE_DYNAMIC_LANGUAGE_LOADING
-    value: true
+    value: latest
   buildCommand: bun install; bun --bun vite build
   staticPublishPath: dist
   rootDir: bun-react-vite
@@ -18,7 +16,7 @@ services:
   runtime: node
   envVars:
   - key: BUN_VERSION
-    value: 1.1.4 
+    value: latest
   repo: https://github.com/robdimarco-render/example-bun-app
   branch: main
   plan: starter
